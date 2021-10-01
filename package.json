@@ -1,0 +1,42 @@
+{
+  "name": "clean-architecture-react",
+  "version": "1.0.0",
+  "author": {
+    "name": "Osman Cea",
+    "email": "osman.cea@gmail.com",
+    "url": "https://daslaf.dev"
+  },
+  "description": "Implementación de la arquitectura CLEAN en React",
+  "keywords": ["React", "CLEAN Architecture"],
+  "main": "src/index.tsx",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash.debounce": "4.0.6",
+    "@types/styled-components": "5.1.14",
+    "lodash.debounce": "4.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "7.2.5",
+    "react-scripts": "4.0.3",
+    "redux": "4.1.1",
+    "redux-thunk": "2.3.0",
+    "styled-components": "5.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.20",
+    "@types/react-dom": "17.0.9",
+    "typescript": "4.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
