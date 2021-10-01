@@ -6,7 +6,7 @@
     "email": "osman.cea@gmail.com",
     "url": "https://daslaf.dev"
   },
-  "description": "Implementación de la arquitectura CLEAN en React",
+  "description": "A CLEAN architecture implementation for React",
   "keywords": ["React", "CLEAN Architecture"],
   "main": "src/index.tsx",
   "license": "MIT",
