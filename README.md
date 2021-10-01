@@ -540,12 +540,6 @@ const CounterView = () => {
 export default CounterView;
 ```
 
-See the full example down below
-
-[A-really-convoluted-CLEAN-architecture-counter-app](https://codesandbox.io/s/a-really-convoluted-clean-architecture-counter-app-o2dz2?file=/src/index.tsx)
-
-# Main takeaways
-
 ## References
 
 - Martin Fowler - Catalog of Patterns of Enterprise Application Architecture
@@ -556,8 +550,6 @@ See the full example down below
 [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - Daniel Mackay - Clean Architecture, an introduction
 [https://www.dandoescode.com/blog/clean-architecture-an-introduction/](https://www.dandoescode.com/blog/clean-architecture-an-introduction/)
-- Our good friends at the Android customers team 
-[Architecture definitions](https://www.notion.so/Architecture-definitions-9e630d9061a64d9aa362d5266e621c9a)
 - CodingWithMitch - 2 Key Concepts of Clean Architecture
 [https://www.youtube.com/watch?v=NyJLw3sc17M](https://www.youtube.com/watch?v=NyJLw3sc17M)
 - Frank Bos and Fouad Astitou - Fuck CLEAN Architecture
