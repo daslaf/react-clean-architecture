@@ -1,3 +1,6 @@
+> Find a version in spanish of this article on my website: [
+Arquitectura CLEAN para el frontend](https://daslaf.dev/posts/arquitectura-clean-react)
+
 # On layered architecture 🍰
 
 Layering is not a novel concept. It's been around in the industry for more than a couple of years (some of you reading this document are probably younger than layering) and it's one of the first architectural styles created. In short, layering is nothing more than dividing the concerns of your application into different layers, like in a cake, where the upper layers can talk to the bottom layers but no the other way around.
@@ -303,8 +306,8 @@ function useCounterViewModel(store: CounterStore) {
 
   return {
     count: store.counter?.value,
-    shouldShowSpinner: typeof store.counter === "undefined" || store.isLoading,
-    shouldDisableButton: store.counter?.value === 0,
+    isLoading: typeof store.counter === "undefined" || store.isLoading,
+    canDecrement: Number(store.counter?.value) > 0,
     getCounter,
     incrementCounter,
     decrementCounter
@@ -509,8 +512,8 @@ const CounterView = () => {
   const store = useCounterStoreImplementation();
   const {
     count,
-    shouldDisableButton,
-    shouldShowSpinner,
+    canDecrement,
+    isLoading,
     getCounter,
     incrementCounter,
     decrementCounter
@@ -522,11 +525,11 @@ const CounterView = () => {
 
   return (
     <div className="App">
-      {shouldShowSpinner ? (
+      {isLoading ? (
         <Spinner />
       ) : (
         <>
-          <Button onClick={decrementCounter} disabled={shouldDisableButton}>
+          <Button onClick={decrementCounter} disabled={!canDecrement}>
             dec
           </Button>
           <Count>{count}</Count>

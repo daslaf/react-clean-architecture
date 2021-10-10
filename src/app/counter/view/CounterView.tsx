@@ -17,8 +17,8 @@ const CounterView = () => {
   const store = useCounterStoreImplementation();
   const {
     count,
-    shouldDisableButton,
-    shouldShowSpinner,
+    canDecrement,
+    isLoading,
     getCounter,
     incrementCounter,
     decrementCounter
@@ -30,11 +30,11 @@ const CounterView = () => {
 
   return (
     <div className="App">
-      {shouldShowSpinner ? (
+      {isLoading ? (
         <Spinner />
       ) : (
         <>
-          <Button onClick={decrementCounter} disabled={shouldDisableButton}>
+          <Button onClick={decrementCounter} disabled={!canDecrement}>
             dec
           </Button>
           <Count>{count}</Count>

@@ -39,8 +39,8 @@ function useCounterViewModel(store: CounterStore) {
 
   return {
     count: store.counter?.value,
-    shouldShowSpinner: typeof store.counter === "undefined" || store.isLoading,
-    shouldDisableButton: store.counter?.value === 0,
+    isLoading: typeof store.counter === "undefined" || store.isLoading,
+    canDecrement: Number(store.counter?.value) > 0,
     getCounter,
     incrementCounter,
     decrementCounter

@@ -18,14 +18,11 @@ const updateCounterUseCase = (
     ? updateBy(store.counter)
     : store.counter;
 
-  if (updatedCounter) {
-    store.setCounter(updatedCounter);
+  if (!updatedCounter || store.counter?.value === updatedCounter?.value) return;
 
-    return debouncedTask(() => {
-      console.log('call update counter')
-      return store.updateCounter(updatedCounter)
-    });
-  }
+  store.setCounter(updatedCounter);
+
+  return debouncedTask(() => store.updateCounter(updatedCounter));
 };
 
 export { updateCounterUseCase };
